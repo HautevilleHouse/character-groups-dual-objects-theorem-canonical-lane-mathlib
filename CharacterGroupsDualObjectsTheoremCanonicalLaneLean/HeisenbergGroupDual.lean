@@ -1,0 +1,16 @@
+import canonicalLaneMathlib.AdmissibleClass
+import CharacterGroupsDualObjectsTheoremCanonicalLaneLean.CharacterGroupsPackage
+import CharacterGroupsDualObjectsTheoremCanonicalLaneLean.DualObjectStructure
+
+namespace HautevilleHouse
+namespace CharacterGroupsDualObjectsTheoremCanonicalLaneLean
+
+structure HeisenbergGroupDual where
+  heisenbergGroup : Type
+  heisenbergDual : DualObject heisenbergGroup
+  stoneVonNeumannTheorem : Prop
+
+def HeisenbergGroupDualClosed (H : HeisenbergGroupDual) : Prop := H.stoneVonNeumannTheorem
+
+end CharacterGroupsDualObjectsTheoremCanonicalLaneLean
+end HautevilleHouse

@@ -1,0 +1,20 @@
+import CharacterGroupsDualObjectsCanonicalLaneLean.AdmissibleClass
+import CharacterGroupsDualObjectsCanonicalLaneLean.BridgeLemmas
+import CharacterGroupsDualObjectsCanonicalLaneLean.GateLemmas
+import CharacterGroupsDualObjectsCanonicalLaneLean.FinalTheorem
+import CharacterGroupsDualObjectsCanonicalLaneLean.LocalCompactness
+import CharacterGroupsDualObjectsCanonicalLaneLean.PontryaginDuality
+import CharacterGroupsDualObjectsCanonicalLaneLean.DualObjectClassification
+
+namespace HautevilleHouse
+namespace CharacterGroupsDualObjectsCanonicalLaneLean
+
+def ConstrainedCharacterGroupsDualObjectsClosure (A : AdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem constrained_character_groups_dual_objects_endgame (A : AdmissibleClass) :
+    ConstrainedCharacterGroupsDualObjectsClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end CharacterGroupsDualObjectsCanonicalLaneLean
+end HautevilleHouse
